@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #0f172a;
+  --color-brand-darker: #020617;
+  --color-brand-slate: #1e293b;
+  --color-brand-light: #f8fafc;
+  --color-brand-border: #e2e8f0;
+  --color-brand-blue: #0284c7;
+  --color-brand-blueLight: #38bdf8;
+  --color-brand-blueDark: #0369a1;
+  --color-brand-teal: #0d9488;
+  --color-brand-tealLight: #2dd4bf;
+  --color-brand-success: #10b981;
+  --color-brand-warning: #f59e0b;
+  --color-brand-danger: #ef4444;
+
+  --font-sans: 'Inter', 'Outfit', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
+
+  --shadow-glass: 0 8px 32px 0 rgba(14, 165, 233, 0.06);
+  --shadow-premium: 0 10px 25px -3px rgba(15, 23, 42, 0.05), 0 4px 6px -2px rgba(15, 23, 42, 0.05);
+  --shadow-glow: 0 0 15px 0 rgba(2, 132, 199, 0.3);
+}
+
+body {
+  background-color: var(--color-brand-light);
+  color: var(--color-brand-dark);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom scrollbar hiding utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px 0 rgba(2, 132, 199, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px 5px rgba(2, 132, 199, 0.45);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3.5s infinite ease-in-out;
+}
