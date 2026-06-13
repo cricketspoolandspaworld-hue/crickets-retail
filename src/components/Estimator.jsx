@@ -161,7 +161,7 @@ export default function Estimator() {
     } else {
       text += `• Service: Chemical-Only Check\n`;
       text += `• Rate: $${maintenancePrice}.00 per visit\n`;
-      text += `• Note: This is a per-trip cost. Balancing chemicals used are billed extra based on usage.\n`;
+      text += `• Note: This is a per-trip cost. Balancing chemicals used are billed additionally based on usage.\n`;
     }
 
     // Quarterly services
