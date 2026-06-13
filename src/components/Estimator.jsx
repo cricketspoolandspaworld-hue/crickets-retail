@@ -157,7 +157,7 @@ export default function Estimator() {
       text += `• Service: Routine Pool Maintenance (${poolType === 'Pool' ? 'Pool Only' : 'Pool & Spa Combo'})\n`;
       text += `• Frequency: ${frequency === 'Weekly' ? 'Weekly' : frequency === 'BiWeekly' ? 'Every other week' : 'Multiple visits per week'}\n`;
       text += `• Rate: $${maintenancePrice}.00 per visit\n`;
-      text += `• Note: Rate includes all cleaning services and balancing chemicals. All specialty and non-standard chemicals are billed extra based on usage.\n`;
+      text += `• Note: Rate includes cleaning services and balancing chemicals. All specialty and non-standard chemicals are billed extra based on usage.\n`;
     } else {
       text += `• Service: Chemical-Only Check\n`;
       text += `• Rate: $${maintenancePrice}.00 per visit\n`;
@@ -209,8 +209,8 @@ export default function Estimator() {
                   type="button"
                   onClick={() => setServiceType('routine')}
                   className={`flex flex-col items-start p-4 rounded-xl border-2 transition-all text-left relative cursor-pointer ${serviceType === 'routine'
-                      ? 'border-brand-blue bg-brand-blue/5 text-brand-blue font-bold shadow-sm'
-                      : 'border-brand-border bg-white text-slate-500 hover:border-slate-300 font-medium'
+                    ? 'border-brand-blue bg-brand-blue/5 text-brand-blue font-bold shadow-sm'
+                    : 'border-brand-border bg-white text-slate-500 hover:border-slate-300 font-medium'
                     }`}
                 >
                   <div className="flex items-center justify-between w-full">
@@ -225,8 +225,8 @@ export default function Estimator() {
                   type="button"
                   onClick={() => setServiceType('chemCheck')}
                   className={`flex flex-col items-start p-4 rounded-xl border-2 transition-all text-left relative cursor-pointer ${serviceType === 'chemCheck'
-                      ? 'border-brand-blue bg-brand-blue/5 text-brand-blue font-bold shadow-sm'
-                      : 'border-brand-border bg-white text-slate-500 hover:border-slate-300 font-medium'
+                    ? 'border-brand-blue bg-brand-blue/5 text-brand-blue font-bold shadow-sm'
+                    : 'border-brand-border bg-white text-slate-500 hover:border-slate-300 font-medium'
                     }`}
                 >
                   <div className="flex items-center justify-between w-full">
@@ -251,8 +251,8 @@ export default function Estimator() {
                       type="button"
                       onClick={() => setPoolType('Pool')}
                       className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all text-center cursor-pointer ${poolType === 'Pool'
-                          ? 'border-brand-blue bg-brand-blue/5 text-brand-blue font-bold shadow-sm'
-                          : 'border-brand-border bg-white text-slate-500 hover:border-slate-300 font-medium'
+                        ? 'border-brand-blue bg-brand-blue/5 text-brand-blue font-bold shadow-sm'
+                        : 'border-brand-border bg-white text-slate-500 hover:border-slate-300 font-medium'
                         }`}
                     >
                       <span className="text-lg mb-0.5">🏊</span>
@@ -263,8 +263,8 @@ export default function Estimator() {
                       type="button"
                       onClick={() => setPoolType('PoolSpa')}
                       className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all text-center cursor-pointer ${poolType === 'PoolSpa'
-                          ? 'border-brand-blue bg-brand-blue/5 text-brand-blue font-bold shadow-sm'
-                          : 'border-brand-border bg-white text-slate-500 hover:border-slate-300 font-medium'
+                        ? 'border-brand-blue bg-brand-blue/5 text-brand-blue font-bold shadow-sm'
+                        : 'border-brand-border bg-white text-slate-500 hover:border-slate-300 font-medium'
                         }`}
                     >
                       <span className="text-lg mb-0.5">♨️</span>
@@ -324,8 +324,8 @@ export default function Estimator() {
                       type="button"
                       onClick={() => setChemCheckType('std')}
                       className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all text-center cursor-pointer ${chemCheckType === 'std'
-                          ? 'border-brand-blue bg-brand-blue/5 text-brand-blue font-bold shadow-sm'
-                          : 'border-brand-border bg-white text-slate-500 hover:border-slate-300 font-medium'
+                        ? 'border-brand-blue bg-brand-blue/5 text-brand-blue font-bold shadow-sm'
+                        : 'border-brand-border bg-white text-slate-500 hover:border-slate-300 font-medium'
                         }`}
                     >
                       <span className="text-sm font-semibold">Standard Chem Check</span>
@@ -336,8 +336,8 @@ export default function Estimator() {
                       type="button"
                       onClick={() => setChemCheckType('out')}
                       className={`flex flex-col items-center justify-center p-3 rounded-xl border-2 transition-all text-center cursor-pointer ${chemCheckType === 'out'
-                          ? 'border-brand-blue bg-brand-blue/5 text-brand-blue font-bold shadow-sm'
-                          : 'border-brand-border bg-white text-slate-500 hover:border-slate-300 font-medium'
+                        ? 'border-brand-blue bg-brand-blue/5 text-brand-blue font-bold shadow-sm'
+                        : 'border-brand-border bg-white text-slate-500 hover:border-slate-300 font-medium'
                         }`}
                     >
                       <span className="text-sm font-semibold">Outside Lafayette</span>
@@ -385,8 +385,8 @@ export default function Estimator() {
                 type="button"
                 onClick={() => toggleAddon('cart')}
                 className={`flex items-center justify-between p-4 rounded-xl border-2 transition-all text-left cursor-pointer ${addons.cart
-                    ? 'border-brand-blue bg-brand-blue/5 text-brand-blue'
-                    : 'border-brand-border bg-white text-slate-600 hover:border-slate-300'
+                  ? 'border-brand-blue bg-brand-blue/5 text-brand-blue'
+                  : 'border-brand-border bg-white text-slate-600 hover:border-slate-300'
                   }`}
               >
                 <div className="flex items-center space-x-3">
@@ -406,8 +406,8 @@ export default function Estimator() {
                 type="button"
                 onClick={() => toggleAddon('cell')}
                 className={`flex items-center justify-between p-4 rounded-xl border-2 transition-all text-left cursor-pointer ${addons.cell
-                    ? 'border-brand-blue bg-brand-blue/5 text-brand-blue'
-                    : 'border-brand-border bg-white text-slate-600 hover:border-slate-300'
+                  ? 'border-brand-blue bg-brand-blue/5 text-brand-blue'
+                  : 'border-brand-border bg-white text-slate-600 hover:border-slate-300'
                   }`}
               >
                 <div className="flex items-center space-x-3">
@@ -498,9 +498,9 @@ export default function Estimator() {
                     <span className="text-[10px] text-slate-400 block mt-0.5">Coords: {coords?.lat.toFixed(4)}, {coords?.lng.toFixed(4)}</span>
                   </div>
                   <span className={`px-3 py-1 rounded-full font-bold text-[10px] shadow-sm uppercase ${distance < 8 ? 'bg-teal-100 text-teal-800 border border-teal-200' :
-                      distance <= 15 ? 'bg-blue-100 text-blue-800 border border-blue-200' :
-                        distance <= 20 ? 'bg-indigo-100 text-indigo-800 border border-indigo-200' :
-                          'bg-red-100 text-red-800 border border-red-200 animate-pulse'
+                    distance <= 15 ? 'bg-blue-100 text-blue-800 border border-blue-200' :
+                      distance <= 20 ? 'bg-indigo-100 text-indigo-800 border border-indigo-200' :
+                        'bg-red-100 text-red-800 border border-red-200 animate-pulse'
                     }`}>
                     {distance < 8 ? 'Zone 1' :
                       distance <= 15 ? 'Zone 2' :
@@ -609,8 +609,8 @@ export default function Estimator() {
               type="button"
               onClick={handleCopy}
               className={`w-full py-2.5 px-4 rounded-xl text-xs font-bold font-outfit transition-all flex items-center justify-center gap-2 cursor-pointer ${copied
-                  ? 'bg-brand-success text-white shadow-sm'
-                  : 'bg-slate-800 hover:bg-slate-900 text-white shadow-sm'
+                ? 'bg-brand-success text-white shadow-sm'
+                : 'bg-slate-800 hover:bg-slate-900 text-white shadow-sm'
                 }`}
             >
               {copied ? (
