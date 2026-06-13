@@ -157,7 +157,7 @@ export default function Estimator() {
       text += `• Service: Routine Pool Maintenance (${poolType === 'Pool' ? 'Pool Only' : 'Pool & Spa Combo'})\n`;
       text += `• Frequency: ${frequency === 'Weekly' ? 'Weekly' : frequency === 'BiWeekly' ? 'Every other week' : 'Multiple visits per week'}\n`;
       text += `• Rate: $${maintenancePrice}.00 per visit\n`;
-      text += `• Note: Rate includes cleaning services and balancing chemicals. All specialty and non-standard chemicals are billed extra based on usage.\n`;
+      text += `• Note: Regular balancing chemicals are included in base rate. Specialty and extra chemicals are billed additionally.\n`;
     } else {
       text += `• Service: Chemical-Only Check\n`;
       text += `• Rate: $${maintenancePrice}.00 per visit\n`;
@@ -549,8 +549,8 @@ export default function Estimator() {
                 </div>
                 <p className="text-[10px] text-slate-400 mt-1 leading-normal">
                   {serviceType === 'routine'
-                    ? 'Includes cleaning & balancing chemicals'
-                    : 'Per trip cost (chemicals billed separate)'}
+                    ? 'Regular balancing chemicals are included in base rate. Specialty & extra chemicals billed additionally.'
+                    : 'Per trip cost. Balancing chemicals used are billed additionally based on usage.'}
                 </p>
               </div>
 
