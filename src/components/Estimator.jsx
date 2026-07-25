@@ -146,22 +146,27 @@ export default function Estimator() {
 
   // Generate Customer Estimate Text (Rebranded for Cricket's Retail)
   const copyText = useMemo(() => {
-    let text = `Hi! Here is your pool service estimate from Cricket's Pool & Spa World\n\n`;
+    let text = `Hi! Here is your pool service estimate from Cricket's Pool & Spa World.\n\n`;
 
     if (matchedAddress || address) {
-      text += `Address: ${matchedAddress || address}\n`;
+      text += `Address: ${matchedAddress || address}\n\n`;
     }
 
-    text += `\nService Details:\n`;
+    text += `Service Details:\n`;
     if (serviceType === 'routine') {
-      text += `• Service: Routine Pool Maintenance (${poolType === 'Pool' ? 'Pool Only' : 'Pool & Spa Combo'})\n`;
+      text += `• Service: Full-Service Pool & Spa Maintenance (${poolType === 'Pool' ? 'Pool Only' : 'Pool & Spa Combo'})\n`;
       text += `• Frequency: ${frequency === 'Weekly' ? 'Weekly' : frequency === 'BiWeekly' ? 'Every other week' : 'Multiple visits per week'}\n`;
-      text += `• Rate: $${maintenancePrice}.00 per visit\n`;
-      text += `• Note: Regular balancing chemicals are included in base rate. Specialty and extra chemicals are billed additionally.\n`;
+      text += `• Rate: $${maintenancePrice}.00 per visit\n\n`;
+      text += `Chemicals & Maintenance Notes:\n`;
+      text += `• Regular balancing chemicals are included.\n`;
+      text += `• Specialty chemicals, stain/scale treatments, and extra chemicals are billed additionally.\n`;
+      text += `• Cartridge filters and salt cells incur a quarterly cleaning fee.\n`;
     } else {
       text += `• Service: Chemical-Only Check\n`;
-      text += `• Rate: $${maintenancePrice}.00 per visit\n`;
-      text += `• Note: This is a per-trip cost. Balancing chemicals used are billed additionally based on usage.\n`;
+      text += `• Rate: $${maintenancePrice}.00 per visit\n\n`;
+      text += `Chemicals & Maintenance Notes:\n`;
+      text += `• This is a per-trip cost.\n`;
+      text += `• Balancing chemicals used are billed additionally based on usage.\n`;
     }
 
     // Quarterly services
@@ -176,7 +181,7 @@ export default function Estimator() {
       });
     }
 
-    text += `\n*Please note: All estimates are subject to a final visual inspection of the pool. \n\n`;
+    text += `\nPlease note: Estimates are subject to a final visual inspection of the pool.\n\n`;
     text += `Let us know if you have any questions or if you'd like to get on the schedule!`;
     return text;
   }, [serviceType, poolType, frequency, maintenancePrice, addons, address, matchedAddress]);
@@ -549,7 +554,7 @@ export default function Estimator() {
                 </div>
                 <p className="text-[10px] text-slate-400 mt-1 leading-normal">
                   {serviceType === 'routine'
-                    ? 'Regular balancing chemicals are included in base rate. Specialty & extra chemicals billed additionally.'
+                    ? 'Regular balancing chemicals are included in base rate. Stain & scale prevention and removal, along with specialty and extra chemicals, are billed additionally.'
                     : 'Per trip cost. Balancing chemicals used are billed additionally based on usage.'}
                 </p>
               </div>
@@ -602,7 +607,7 @@ export default function Estimator() {
             <textarea
               readOnly
               value={copyText}
-              className="w-full h-44 bg-slate-50 border border-slate-200 rounded-xl p-3 text-[11px] font-mono leading-relaxed text-slate-700 focus:outline-none resize-none"
+              className="w-full h-[420px] bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-[11px] font-mono leading-relaxed text-slate-700 focus:outline-none resize-none"
             />
 
             <button
